@@ -1,0 +1,241 @@
+/*<meta />*/
+
+@import url('Linked B.css');
+
+body
+{
+	color: #a9a9a9;
+	font-family: 'Poor Richard';
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 18.0pt;
+}
+
+h3
+{
+	font-weight: bold;
+	font-size: 14.0pt;
+}
+
+h4
+{
+	font-weight: bold;
+	font-size: 12.0pt;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 10.0pt;
+}
+
+h6
+{
+	font-weight: bold;
+	font-size: 8.0pt;
+}
+
+p
+{
+	font-size: 12.0pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+ol,
+ul
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+img
+{
+	border: none;
+}
+
+a.Popup
+{
+	
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: #006600;
+}
+
+MadCap|expandingBody
+{
+	color: #777777;
+	font-style: italic;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	font-style: italic;
+	text-decoration: none;
+	color: #006600;
+}
+
+a:hover
+{
+	color: #ffd700;
+	font-family: Broadway;
+	font-size: 80%;
+	vertical-align: super;
+}
+
+MadCap|xref
+{
+	color: #008b8b;
+}
+
+MadCap|xref:focus
+{
+	color: #ff00ff;
+}
+
+MadCap|xref:hover
+{
+	color: #00fa9a;
+	font-family: 'Poor Richard';
+}
+
+.abc:hover::selection
+{
+	color: red;
+}
+
+li
+{
+	margin-bottom: 10px;
+}
+
+li:after
+{
+	content: '';
+	display: block;
+	width: 0;
+	height: 3px;
+	background: #009688;
+	transition: width .8s;
+}
+
+.before::before
+{
+	content: 'Read this-';
+	color: #0000ff;
+}
+
+li:not(nth-child(1)):not(nth-child(3)):hover:after
+{
+	width: 90%;
+}
+
+div.outline
+{
+	background-color: #c0c0c0;
+	outline-style: dashed;
+	outline-width: thick;
+	outline-color: #ff0000;
+	transform: rotate(10deg);
+	width: 400px;
+	margin-left: 200px;
+}
+
+b.supclass
+{
+	color: #0000ff;
+}
+
+#grad
+{
+	background: red;
+	/* For browsers that do not support gradients */
+	/* For Safari 5.1 to 6.0 */
+	background: -webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+	/* For Opera 11.1 to 12.0 */
+	background: -o-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+	/* For Fx 3.6 to 15 */
+	background: -moz-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+	/* Standard syntax */
+	background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+	height: 400px;
+	text-align: center;
+	padding-top: 200px;
+	color: #555753;
+	font-family: 'Poor Richard';
+	font-size: 20pt;
+	font-weight: bold;
+	margin-bottom: 100px;
+}
+
+/* entire container, keeps perspective */
+
+.flip-container
+{
+	perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper
+{
+	transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back
+{
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+
+.flipper
+{
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+
+.front,
+.back
+{
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+
+.front
+{
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+/* back, initially hidden pane */
+
+.back
+{
+	transform: rotateY(180deg);
+	background: linear-gradient(to right, violet,indigo,blue,green,yellow,orange,red);
+}
+
